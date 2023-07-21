@@ -1,7 +1,7 @@
 <h1>TryHackMe - Intro To Offensive Security Lab</h1>
 
 <h2>Description</h2>
-This lab consists of an easy break down into the world of an ethical hacker that looks for faults in websites that leads to vulnerable information or access to important systems. The following lab is TryHackMe's introduction into the world of hacking.
+This lab consists of an easy break down into the world of an ethical hacker that looks for faults in websites that leads to vulnerable information or access to important systems. The following lab is TryHackMe's introduction into the world of hacking by simulating a loophole in a banking website, where money can be transferred to another account.
 <br />
 
 
@@ -38,30 +38,37 @@ You will see that GoBuster scans the website with each word in the list, finding
 
 Gobuster is a tool used to brute-force: URIs (directories and files) in web sites, DNS subdomains (with wildcard support), Virtual Host names on target web servers, Open Amazon S3 buckets, Open Google Cloud buckets and TFTP servers.
 
+<p align="center">
 <img src="https://i.imgur.com/uydghT3.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
 
 A wordlist may contain thousands of words to search through in the .txt file.
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
+<p align="center">
+Finding Secret Pages: <br/>
+
+<p align="center">
+<img src="https://i.imgur.com/lVRqR5V.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
+
+At this point you will be shown what unprotected pages are vulnerable.
+
+Using TryHackMe's example, with the use of GoBuster and terminal we found a secret bank transfer page that allows us to transfer money between accounts at the bank (/bank-transfer). 
+
+Type the hidden page into the FakeBank website in the browser.
+
+http://fakebank.com/bank-transfer
+
+From here we were able to enter account details and transfer funds from one bank account to another.
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
+
+<p align="center">
+Mission Complete:  <br/>
+
+ <p align="center">
+<img src="https://i.imgur.com/1s7L8DD.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
 <br />
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
-</p>
 
 <!--
  ```diff
