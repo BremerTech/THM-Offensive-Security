@@ -19,11 +19,28 @@ This lab consists of an easy break down into the world of an ethical hacker that
 
 <p align="center">
 Launch Browser and Visit Targeted Site: <br/>
+<br />
 <img src="https://i.imgur.com/DOthw8z.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
+<br /> 
 <br />
-<br />
+
+<p align="center">
 Finding Hidden Website Pages :  <br/>
 <img src="https://i.imgur.com/k0MPRjZ.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
+
+Open Terminal and use command to find potentially hidden and vulnerable pages.
+
+gobuster -u http://fakebank.com -w wordlist.txt dir
+
+In the command above, -u is used to state the website we're scanning, -w takes a list of words to iterate through to find hidden pages.
+
+You will see that GoBuster scans the website with each word in the list, finding pages that exist on the site. GoBuster will have told you the pages it found in the list of page/directory names (indicated by Status: 200).
+
+Gobuster is a tool used to brute-force: URIs (directories and files) in web sites, DNS subdomains (with wildcard support), Virtual Host names on target web servers, Open Amazon S3 buckets, Open Google Cloud buckets and TFTP servers.
+
+<img src="https://i.imgur.com/uydghT3.png" height="80%" width="80%" alt="Intro To Offensive Security"/>
+
+A wordlist may contain thousands of words to search through in the .txt file.
 <br />
 <br />
 Enter the number of passes: <br/>
